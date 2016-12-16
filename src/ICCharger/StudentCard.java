@@ -2,7 +2,7 @@ package ICCharger;
 
 public class StudentCard {
 	private String studentName; // 学生名
-	private String studentNumber; // 学籍番号
+	private int studentNumber; // 学籍番号
 	private int accountBalance; // 残高
 	
 	void setStudentName(String name) {
@@ -13,11 +13,11 @@ public class StudentCard {
 		return studentName;
 	}
 	
-	void setStudentNumber(String number) {
+	void setStudentNumber(int number) {
 		studentNumber = number;
 	}
 	
-	String getStudentNumber() {
+	int getStudentNumber() {
 		return studentNumber;
 	}
 	
