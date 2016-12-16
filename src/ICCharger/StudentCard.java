@@ -1,6 +1,7 @@
 package ICCharger;
 
 public class StudentCard {
-	private String StudentName;
-	
+	private String studentName; // Šw¶–¼
+	private int studentNumber; // ŠwĞ”Ô†
+	private int balance; // c‚
 }
