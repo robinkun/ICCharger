@@ -8,7 +8,9 @@ public class StudentCard {
 	private final int maxBalance = 10000;
 	static ArrayList<StudentCard> cardList = new ArrayList<StudentCard>();
 	
-	StudentCard() {
+	StudentCard(int num, String name) {
+		setStudentName(name);
+		setStudentNumber(num);
 		cardList.add(this);
 	}
 	
