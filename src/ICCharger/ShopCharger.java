@@ -5,13 +5,23 @@ import java.util.*;
 public class ShopCharger {
 	private StudentCard insertedCard;
 	private Queue<ChargeHistory> finalChargeDate = new ArrayDeque<ChargeHistory>();
+	static private final int maxHistory = 5;
 	
 	void insertStudentCard(StudentCard card) { 
 		insertedCard = card;
 	}
 	
 	int chargeMoney(int money) {
-		if(insertedCard == null) return 0;
+		if(insertedCard == null) {
+			System.out.printf("ƒJ[ƒh‚ª‘}“ü‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ\n");
+			return 0;
+		}
+		if(finalChargeDate.size() >= maxHistory) {
+			finalChargeDate.poll();
+		}
+		
+		ChargeHistory history = new ChargeHistory();
+		finalChargeDate.offer(history);
 		return insertedCard.chargeAccountBalance(money);
 	}
 	
