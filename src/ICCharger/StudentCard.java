@@ -1,9 +1,16 @@
 package ICCharger;
+import java.util.ArrayList;
 
 public class StudentCard {
-	private String studentName; // 学生名
-	private int studentNumber; // 学籍番号
-	private int accountBalance; // 残高
+	private String studentName = ""; // 学生名
+	private int studentNumber = 0; // 学籍番号
+	private int accountBalance = 0; // 残高
+	private final int maxBalance = 10000;
+	static ArrayList<StudentCard> cardList = new ArrayList<StudentCard>();
+	
+	StudentCard() {
+		cardList.add(this);
+	}
 	
 	void setStudentName(String name) {
 		studentName = name;
@@ -28,4 +35,16 @@ public class StudentCard {
 	int getAccountBalance() {
 		return accountBalance;
 	}
+	
+	// 10000円超えたら差額を返す。
+	int chargeAccountBalance(int money) {
+		accountBalance += money;
+		if(accountBalance > maxBalance) {
+			int sub = accountBalance - maxBalance; // 差額
+			accountBalance = maxBalance;
+			return sub;
+		}
+		return 0;
+	}
+	
 }
