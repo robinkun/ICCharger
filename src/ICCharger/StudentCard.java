@@ -1,5 +1,6 @@
 package ICCharger;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class StudentCard {
 	private String studentName = ""; // äwê∂ñº
@@ -7,6 +8,7 @@ public class StudentCard {
 	private int accountBalance = 0; // écçÇ
 	private final int maxBalance = 10000;
 	static ArrayList<StudentCard> cardList = new ArrayList<StudentCard>();
+	private Calendar finalChargeDate;
 	
 	StudentCard(int num, String name) {
 		setStudentName(name);
@@ -36,6 +38,10 @@ public class StudentCard {
 	
 	int getAccountBalance() {
 		return accountBalance;
+	}
+	
+	ArrayList<StudentCard> getStudentCardList() {
+		return cardList;
 	}
 	
 	// 10000â~í¥Ç¶ÇΩÇÁç∑äzÇï‘Ç∑ÅB
