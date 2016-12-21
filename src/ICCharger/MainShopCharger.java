@@ -9,10 +9,19 @@ public class MainShopCharger {
 		
 		mainShopCharger.insertStudentCard(card1);
 		mainShopCharger.chargeMoney(3000);
+		mainShopCharger.chargeMoney(300);
+		mainShopCharger.chargeMoney(200);
+		mainShopCharger.chargeMoney(100);
+		mainShopCharger.chargeMoney(800);
 		mainShopCharger.printAccountBalance();
 		
 		mainShopCharger.insertStudentCard(card2);
 		mainShopCharger.chargeMoney(8765);
 		mainShopCharger.printAccountBalance();
+		
+		System.out.println("発行学生証枚数:" + card1.getStudentCardList().size());
+		System.out.println("発行学生証枚数:" + card2.getStudentCardList().size());
+		
+		mainShopCharger.printChargeHistory();
 	}
 }
