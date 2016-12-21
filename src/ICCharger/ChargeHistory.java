@@ -9,6 +9,7 @@ public class ChargeHistory {
 	ChargeHistory(int id, int balance) {
 		this.id = id;
 		this.balance = balance;
+		date = Calendar.getInstance();
 	}
 	
 	int getId() {
