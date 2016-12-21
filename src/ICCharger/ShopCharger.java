@@ -1,7 +1,10 @@
 package ICCharger;
 
+import java.util.*;
+
 public class ShopCharger {
 	private StudentCard insertedCard;
+	private Queue<ChargeHistory> finalChargeDate = new ArrayDeque<ChargeHistory>();
 	
 	void insertStudentCard(StudentCard card) { 
 		insertedCard = card;
