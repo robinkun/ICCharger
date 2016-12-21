@@ -20,7 +20,7 @@ public class ShopCharger {
 			finalChargeDate.poll();
 		}
 		
-		ChargeHistory history = new ChargeHistory();
+		ChargeHistory history = new ChargeHistory(insertedCard.getStudentNumber(), insertedCard.getAccountBalance());
 		finalChargeDate.offer(history);
 		return insertedCard.chargeAccountBalance(money);
 	}
