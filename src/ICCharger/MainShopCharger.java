@@ -3,8 +3,8 @@ package ICCharger;
 public class MainShopCharger {
 	public static void main(String[] args) {
 		StudentCard card1, card2;
-		card1 = new StudentCard(163000, "‚à‚¿‚à‚¿‚Ì–Ø ˜a‹`");
-		card2 = new StudentCard(129888, "‰^ê•ë ƒ\ƒƒ‚ƒ“");
+		card1 = new StudentCard(163000, "Mila Mola");
+		card2 = new StudentCard(129888, "Pika Chu");
 		ShopCharger mainShopCharger = new ShopCharger();
 		
 		mainShopCharger.insertStudentCard(card1);
