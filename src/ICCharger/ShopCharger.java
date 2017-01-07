@@ -27,7 +27,7 @@ public class ShopCharger {
 	}
 	
 	void printAccountBalance() {
-		System.out.printf("学籍番号：%6d, 名前：%s, 残高%d円\n",
+		System.out.printf("学籍番号：%6d, 氏名：%s, 残高%d円\n",
 				insertedCard.getStudentNumber(), insertedCard.getStudentName(), insertedCard.getAccountBalance());
 	}
 	
